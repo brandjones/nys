@@ -1,5 +1,6 @@
 /node_modules/
 public/dist/
 /server
+.env
 .env.test
 .env.development
