@@ -4,3 +4,10 @@ public/dist/
 .env
 .env.test
 .env.development
+
+
+
+/node_modules
+npm-debug.log
+.DS_Store
+/*.env
