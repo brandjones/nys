@@ -5,7 +5,7 @@ import _ from "lodash";
 import Loader from "../partials/loader";
 
 // Return a function the outputs jsx for mobile screen view: arguments = props
-const OutputMobilePoliticsContent = ({ props }) => {
+const Politics = ({ props }) => {
   if (!props.times.politics) {
     return <Loader />;
   }
@@ -67,4 +67,4 @@ const OutputMobilePoliticsContent = ({ props }) => {
   });
 };
 
-export default OutputMobilePoliticsContent;
+export default Politics;

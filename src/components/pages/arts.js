@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import Content from "../../../../ny-sentinel-custom/src/components/partials/content";
-import MainContent from "../../../../ny-sentinel-custom/src/components/partials/maincontent";
-import { DoubleBorder } from "../../../../ny-sentinel-custom/src/components/partials/border";
+import Content from "../partials/content";
+import MainContent from "../partials/maincontent";
+import { DoubleBorder } from "../partials/border";
 
 const Arts = props => {
   return (

@@ -1,0 +1,109 @@
+/* CELL PHONE */
+@media only screen and (min-width: 0px) and (max-width: 739px) {
+  .Segment {
+    background: #f7f7f7;
+    border-bottom: 1px solid #e2e2e2;
+    font-family: "Old Standart TT";
+    font-size: 0.9rem;
+    padding: 0.5rem;
+  }
+
+  .Segment__wrapper { 
+    align-content: center; 
+    align-items: center; 
+    display: flex; 
+    justify-content: space-around; 
+    padding: 0 1rem 0 1rem;
+  }
+
+  .Segment__wrapper__column-one {
+    display: none; 
+  }
+
+  .Segment__wrapper__column-two {
+    font-size: .8rem; 
+  }
+  .Segment__wrapper__column-three {
+    color: #96c9ee;
+    font-family: "Hind";
+    text-align: right;
+    text-transform: uppercase;
+  }
+
+  .Segment__wrapper__column-three a {
+    color: rgb(50, 104, 145);
+    font-size: 0.6rem;
+  }
+
+  .Segment__wrapper__column-three a:first-child {
+    border-right: 0.5px solid #e2e2e2;
+    padding: 0.2rem;
+  }
+
+  .Segment__wrapper__column-three a:nth-child(2) {
+    margin-left: 2px;
+    padding: 0.2rem;
+  }
+
+  .Segment i {
+    color: #999;
+  }
+}
+
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+  .Segment {
+    background: #fff;
+    border-bottom: 1px solid #e2e2e2;
+    font-family: "Old Standart TT";
+    font-size: 0.9rem;
+    padding: 0.7rem;
+  }
+
+  .Segment__wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 1rem 0 1rem;
+  }
+
+  .Segment__wrapper__column-one {
+    display: flex;
+ 
+  }
+
+  .Segment__wrapper__column-two {
+    font-size: 13px;
+    font-weight: lighter; 
+ 
+  }
+  .Segment__wrapper__column-three {
+    color: #96c9ee;
+    font-family: "Hind";
+    text-transform: uppercase;
+  }
+
+  .Segment__wrapper__column-three a {
+    color: rgb(50, 104, 145);
+    font-size: 0.6rem;
+  }
+
+  .Segment__wrapper__column-three a:first-child {
+    border-right: 0.5px solid #e2e2e2;
+    padding: 0.2rem;
+  }
+
+  .Segment__wrapper__column-three a:nth-child(2) {
+    margin-left: 2px;
+    padding: 0.2rem;
+  }
+
+  .Segment i {
+    color: #999;
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  .Segment {
+    display: none;
+  }
+}

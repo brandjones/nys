@@ -5,7 +5,7 @@ import _ from "lodash";
 import Loader from "../partials/loader";
 
 // Return a function the outputs jsx for mobile screen view: arguments = props
-const OutputMobileBusinessContent = ({ props }) => {
+const Business = ({ props }) => {
   if (!props.times.business) {
     return <Loader />;
   }
@@ -67,4 +67,4 @@ const OutputMobileBusinessContent = ({ props }) => {
   });
 };
 
-export default OutputMobileBusinessContent;
+export default Business;

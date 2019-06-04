@@ -1,0 +1,156 @@
+/* THESE ARE STYLES FOR THE CELL PHONE WIDTH */
+@media only screen and (min-width: 0px) and (max-width: 739px) {
+  .TabletContent {
+    display: none;
+  }
+
+  .double {
+    display: none;
+  }
+
+  .TabletContent-column {
+    border-right: 1px solid #e2e2e2;
+  }
+
+  .TabletContent :nth-child(3) {
+    border: 0;
+  }
+
+  .TabletContent-column-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .TabletContent-image-wrapper {
+    margin: 20px 10px 10px 10px;
+    max-height: 55px;
+    max-width: 55px;
+  }
+
+  .TabletContent-image-wrapper.one {
+    margin-left: 0px;
+  }
+
+  .TabletContent-content-wrapper {
+    margin-top: 2px;
+    padding-right: 10px;
+  }
+
+  .TabletContent-content-wrapper h3 {
+    font-family: "Crimson Text";
+    font-size: 15px;
+    font-weight: 800;
+    max-width: 275px;
+  }
+
+  .TabletContent-content-wrapper p {
+    color: #444;
+    font-family: "Crimson Text";
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-top: -13px;
+    max-width: 200px;
+    padding: 0;
+  }
+}
+
+/* THESE ARE STYLES FOR THE TABLET WIDTH  */
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+  .TabletContent {
+    display: inline-block;
+    width: 30%;
+    margin: 5px;
+  }
+
+  .TabletContent a {
+    color: #222;
+  }
+
+  .TabletContent img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .TabletContent-column-wrapper {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .TabletContent-image-wrapper {
+    max-height: 55px;
+    max-width: 55px;
+    width: 125px;
+  }
+
+  .TabletContent-content-wrapper {
+    padding: 10px;
+  }
+
+  .TabletContent-content-wrapper h3 {
+    font-family: "Crimson Text";
+    font-size: 15px;
+    font-weight: 800;
+  }
+
+  .TabletContent-content-wrapper p {
+    color: #444;
+    font-family: "Crimson Text";
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 3000px) {
+  .TabletContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    height: 100px;
+  }
+
+  .TabletContent a {
+    color: #222;
+  }
+
+  .TabletContent img {
+    display: block;
+    max-width: 6rem;
+    height: 4rem;
+  }
+
+  .TabletContent-content-wrapper h3 {
+    font-family: "Crimson Text";
+    font-size: 17px;
+    font-weight: 800;
+  }
+
+  .TabletContent-content-wrapper p {
+    color: #444;
+    font-family: "Crimson Text";
+    font-size: 1.3rem;
+    font-weight: 500;
+  }
+
+  .TabletContent-column-wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .TabletContent-image-wrapper {
+    width: 50%;
+    height: 50%;
+    margin: 10px;
+  }
+
+  .TabletContent-content-wrapper {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    height: 100%;
+  }
+}

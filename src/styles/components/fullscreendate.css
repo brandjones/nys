@@ -1,0 +1,24 @@
+@media only screen and (min-width: 0px) and (max-width: 1023px) {
+  .FullScreenDate {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 3000px) {
+  .FullScreenDate {
+    align-items: baseline;
+    /* background: pink; */
+    /* align-content:  */
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    justify-content: space-between;
+    /* margin-top: -20px; */
+  }
+
+  .FullScreenDate .logo {
+    font-size: 40px;
+    padding: 0;
+    margin: 0;
+  }
+}

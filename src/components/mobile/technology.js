@@ -5,7 +5,7 @@ import _ from "lodash";
 import Loader from "../partials/loader";
 
 // Run a function that displays technology content on mobile view
-const OutputMobileTechnologyScreenContent = ({ props }) => {
+const Technology = ({ props }) => {
   return props.times.technology.map((item, index) => {
     if (!props.times.technology) {
       return <Loader />;
@@ -65,4 +65,4 @@ const OutputMobileTechnologyScreenContent = ({ props }) => {
   });
 };
 
-export default OutputMobileTechnologyScreenContent;
+export default Technology;

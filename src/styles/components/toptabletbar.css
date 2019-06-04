@@ -1,0 +1,66 @@
+@media only screen and (max-width: 1023px) {
+  .TopTabletBar {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .TopTabletBar {
+    /* background: red; */
+    margin: 0;
+    padding: 0;
+  }
+
+  .TopTabletBar-row {
+    /* background: yellow; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .TopTabletBar-column-one {
+    /* background: orange; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+  }
+
+  .TopTabletBar-column-one .bar {
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+  }
+
+  .TopTabletBar-column-one .user {
+    margin: 5px;
+  }
+
+  .TopTabletBar-column-two {
+    align-items: center;
+    /* background: pink; */
+    color: #222;
+    display: flex;
+    font-size: 12px;
+    font-family: "Hind";
+    font-weight: bold;
+    justify-content: flex-end;
+    margin-left: -150px;
+    padding: 5px;
+    text-transform: uppercase;
+    width: 40%;
+  }
+
+  .TopTabletBar-column-two a:first-of-type {
+    margin-right: 10px;
+  }
+
+  .TopTabletBar-column-three {
+    align-items: center;
+    /* background: pink; */
+    display: flex;
+    font-family: "Hind";
+    font-weight: bold;
+    justify-content: flex-end;
+  }
+}

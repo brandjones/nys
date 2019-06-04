@@ -2,8 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
-import google from "../../images/search.png";
-import Form from "../../../../ny-sentinel-custom/src/components/partials/form";
+import google from "../../../public/images/search.png";
+import Form from "../partials/form";
 import { runClassNames } from "./subscribe";
 
 function getClassName(status) {

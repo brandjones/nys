@@ -1,0 +1,60 @@
+@media only screen and (max-width: 1023px) {
+  .divider:first-of-type {
+    visibility: hidden;
+  }
+
+  .RenderContent a {
+    color: #222;
+    display: block;
+    padding: 0 0 0.3rem 0;
+  }
+
+  .RenderContent__title {
+    height: auto;
+    /* padding: 10px; */
+  }
+
+  .RenderContent__title h3 {
+    font-family: "Crimson Text";
+    font-size: 1.4rem;
+    font-style: bold;
+  }
+
+  .RenderContent__abstract {
+    padding: 1rem;
+  }
+
+  .RenderContent__abstract > a {
+    font-family: "Old Standard TT";
+    font-size: 0.8rem;
+    font-style: normal;
+    margin-top: -1rem;
+  }
+
+  .RenderContent__abstract p:first-of-type {
+    color: #222;
+    font-family: "Crimson Text";
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: -0.1rem 0 0 0;
+  }
+
+  .RenderContent p:nth-of-type(2) {
+    color: #999;
+    font-size: 0.7rem;
+    margin: 0.3rem 0 0 0;
+  }
+
+  .RenderContent a:nth-of-type(2) {
+    color: #888;
+    font-size: 0.9rem;
+    margin: 0 0 0.3rem 0;
+    padding: 0.1rem 0 0 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 3000px) {
+  .RenderContent {
+    display: none;
+  }
+}

@@ -1,0 +1,195 @@
+@media only screen and (min-width: 0px) and (max-width: 739px) {
+  .Login {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    width: 100%;
+    height: 20%;
+  }
+
+  .Login .container {
+    width: 600px;
+  }
+  .Login h1 {
+    padding: 0;
+    margin: 0;
+  }
+  .Login .account {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+
+  .Login .account a {
+    color: #3d00f2;
+    margin-left: 5px;
+    margin-top: 3px;
+  }
+
+  .Login .button img {
+    width: 100%;
+    height: 50%;
+  }
+
+  .Login .Form .input {
+    width: 92%;
+  }
+
+  .button-container {
+    align-items: center;
+    align-content: center;
+    background: #3a5ad9;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    margin-bottom: 10px;
+    justify-content: space-around;
+    padding: 5px;
+    width: 98%;
+  }
+
+  .button-container a {
+    color: #fff !important;
+  }
+
+  .button-container :nth-child(2) {
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 50px;
+  }
+}
+
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+  .Login {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    width: 100%;
+    height: 70vh;
+  }
+  .Login .container {
+    width: 600px;
+  }
+  .Login h1 {
+    padding: 0;
+    margin: 0;
+  }
+  .Login .account {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+
+  .Login .account a {
+    color: #3d00f2;
+    margin-left: 5px;
+    margin-top: 3px;
+  }
+
+  .Login .button img {
+    width: 100%;
+    height: 50%;
+  }
+
+  .Login .Form .input {
+    width: 92%;
+  }
+
+  .button-container {
+    align-items: center;
+    align-content: center;
+    background: #3a5ad9;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    margin-bottom: 10px;
+    justify-content: space-around;
+    padding: 5px;
+    width: 98%;
+  }
+
+  .button-container a {
+    color: #fff !important;
+  }
+
+  .button-container :nth-child(2) {
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 50px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 9000px) {
+  .Login {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+    width: 100%;
+    height: 35vh;
+  }
+  .Login .container {
+    width: 600px;
+  }
+  .Login h1 {
+    padding: 0;
+    margin: 0;
+  }
+  .Login .account {
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+
+  .Login .account a {
+    color: #3d00f2;
+    margin-left: 5px;
+    margin-top: 3px;
+  }
+
+  .Login .button img {
+    width: 100%;
+    height: 50%;
+  }
+
+  .Login .Form .input {
+    width: 92%;
+  }
+
+  .button-container {
+    align-items: center;
+    align-content: center;
+    background: #3a5ad9;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    margin-bottom: 10px;
+    justify-content: space-around;
+    padding: 5px;
+    width: 98%;
+  }
+
+  .button-container a {
+    color: #fff !important;
+  }
+
+  .button-container :nth-child(2) {
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 50px;
+  }
+}

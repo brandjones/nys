@@ -1,0 +1,421 @@
+.modal {
+  position: absolute;
+  visibility: hidden;
+  z-index: 1001;
+  text-align: left;
+  background: #fff;
+  border: none;
+  -webkit-box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.2),
+    1px 3px 15px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 1px 3px 3px 0px rgba(110, 23, 23, 0.2),
+    1px 3px 15px 2px rgba(0, 0, 0, 0.2);
+  -webkit-transform-origin: 50% 25%;
+  /* transform-origin: 50% 25%; */
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  border-radius: 0.28571429rem;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+  width: 100%;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 739px) {
+  .MobileModal a {
+    color: #222;
+    margin: 5px;
+  }
+
+  .MobileModal h1,
+  .MobileModal h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .MobileModal-one {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 1px solid #e2e2e2;
+    justify-content: space-around;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .MobileModal-one a {
+    padding: 10px;
+    width: 70%;
+  }
+
+  .MobileModal-one div {
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    margin-left: -50px;
+  }
+
+  .MobileModal-two {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 25px;
+    width: 100%;
+  }
+
+  .UserMenu-one h1,
+  .UserMenu-one h2,
+  .UserMenu-one h3 {
+    color: #222;
+    margin: 0;
+    padding: 0;
+  }
+
+  .UserMenu-one a {
+    color: #222;
+    margin: 5px;
+  }
+
+  .UserMenu-one {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 1px solid #e2e2e2;
+    justify-content: space-around;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .UserMenu-one a {
+    padding: 10px;
+    width: 70%;
+  }
+
+  .UserMenu-one div {
+    align-items: center;
+
+    display: flex;
+    font-size: 18px;
+    margin-left: -50px;
+  }
+
+  .UserMenu-two {
+    border-bottom: 1px solid #e2e2e2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .UserMenu-two a:first-of-type {
+    border-right: 1px solid #e2e2e2;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 45%;
+  }
+
+  .UserMenu-two a:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 40%;
+  }
+
+  .UserMenu-two a,
+  h2 {
+    color: #256793;
+    font-family: "Hind";
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .UserMenu-three div {
+    border-bottom: 1px solid #e2e2e2;
+    color: #777;
+    font-size: 14px;
+    padding: 0 40px;
+  }
+
+  .UserMenu-four {
+    border-bottom: 1px solid #e2e2e2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .UserMenu-four h2 {
+    color: #888;
+    font-weight: lighter;
+    text-transform: none;
+  }
+
+  .UserMenu-four a:first-of-type {
+    border-right: 1px solid #e2e2e2;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 45%;
+  }
+
+  .UserMenu-four a:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 40%;
+  }
+
+  .UserMenu-five {
+    background: #f7f7f7;
+    padding: 25px;
+  }
+
+  .UserMenu .content {
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .UserMenu-five h3 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .UserMenu-five .bookmark,
+  .UserMenu-five .comment,
+  .UserMenu-five .bell {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+  }
+
+  .UserMenu-five .bookmark div,
+  .UserMenu-five .comment div,
+  .UserMenu-five .bell div {
+    align-items: center;
+    display: flex;
+  }
+
+  .UserMenu-five .bookmark div i,
+  .UserMenu-five .comment div i,
+  .UserMenu-five .bell div i {
+    align-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+  }
+}
+
+@media only screen and (min-width: 740px) and (max-width: 3000px) {
+  .modal {
+    visibility: hidden;
+  }
+
+  .MobileModal a {
+    color: #222;
+    margin: 5px;
+  }
+
+  .MobileModal h1,
+  .MobileModal h3 {
+    margin: 0;
+    padding: 0;
+  }
+
+  .MobileModal-one {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 1px solid #e2e2e2;
+    justify-content: space-around;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .MobileModal-one a {
+    padding: 10px;
+    width: 70%;
+  }
+
+  .MobileModal-one div {
+    align-items: center;
+    display: flex;
+    font-size: 18px;
+    margin-left: -50px;
+  }
+
+  .MobileModal-two {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 25px;
+    width: 100%;
+  }
+
+  .UserMenu .bottom-content-wrapper {
+    padding: 0 125px;
+  }
+
+  .UserMenu-one h1,
+  .UserMenu-one h2,
+  .UserMenu-one h3 {
+    color: #222;
+    margin: 0;
+    padding: 0;
+  }
+
+  .UserMenu-one a {
+    color: #222;
+    margin: 5px;
+  }
+
+  .UserMenu-one {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 1px solid #e2e2e2;
+    justify-content: space-around;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .UserMenu-one a {
+    padding: 10px;
+    width: 70%;
+  }
+
+  .UserMenu-one div {
+    align-items: center;
+
+    display: flex;
+    font-size: 18px;
+    margin-left: -50px;
+  }
+
+  .UserMenu-two {
+    border-bottom: 1px solid #e2e2e2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .UserMenu-two a:first-of-type {
+    border-right: 1px solid #e2e2e2;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 45%;
+  }
+
+  .UserMenu-two a:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 40%;
+  }
+
+  .UserMenu-two a,
+  h2 {
+    color: #256793;
+    font-family: "Hind";
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  .UserMenu-three div {
+    border-bottom: 1px solid #e2e2e2;
+    color: #777;
+    font-size: 14px;
+    padding: 0 40px;
+  }
+
+  .UserMenu-four {
+    border-bottom: 1px solid #e2e2e2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .UserMenu-four h2 {
+    color: #888;
+    font-weight: lighter;
+    text-transform: none;
+  }
+
+  .UserMenu-four a:first-of-type {
+    border-right: 1px solid #e2e2e2;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 45%;
+  }
+
+  .UserMenu-four a:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 40%;
+  }
+
+  .UserMenu-five {
+    background: #f7f7f7;
+    padding: 25px;
+  }
+
+  .UserMenu .content {
+    align-items: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .UserMenu-five h3 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .UserMenu-five .bookmark,
+  .UserMenu-five .comment,
+  .UserMenu-five .bell {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+  }
+
+  .UserMenu-five .bookmark div,
+  .UserMenu-five .comment div,
+  .UserMenu-five .bell div {
+    align-items: center;
+    display: flex;
+  }
+
+  .UserMenu-five .bookmark div i,
+  .UserMenu-five .comment div i,
+  .UserMenu-five .bell div i {
+    align-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    height: 25px;
+    width: 25px;
+  }
+}

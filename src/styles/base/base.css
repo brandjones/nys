@@ -1,0 +1,236 @@
+html {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  /* position: relative; */
+}
+
+body {
+  font-family: "Crimson Text";
+  font-size: 16px;
+  margin-bottom: 100px;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  /* max-height: 100%; */
+}
+
+a {
+  text-decoration: none;
+  color: #222;
+}
+
+.image {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  background-color: transparent;
+}
+
+.divider {
+  border-top: 1px solid #e9ecef;
+  margin: 10px;
+  padding: 0;
+}
+
+.forum {
+  border-bottom: 0.5px solid #e2e2e2;
+  font-family: "Forum";
+  margin: 10px;
+  padding: 5px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.text-container {
+  line-height: 1.5;
+  max-width: 700px !important;
+  padding: 0 15px;
+  margin: 0;
+}
+
+.hide {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden !important;
+}
+
+.show {
+  visibility: visible;
+}
+
+.double {
+  border-bottom: 1px solid #121212;
+  padding: 1px;
+  margin-top: -6px;
+}
+
+.block {
+  display: block !important;
+}
+
+.border {
+  margin: 25px;
+  margin-left: 1px;
+  width: 100%;
+}
+.div {
+  padding: 0;
+  margin: 0;
+}
+.grey-border {
+  border-top: 1px solid #e2e2e2;
+  margin: 25px -5px 25px 0;
+  width: 100%;
+}
+
+.border-right {
+  border-right: 1px solid #e2e2e2;
+  height: 200px;
+  margin: 0 15px;
+}
+
+.border-left {
+  border-right: 1px solid #e2e2e2;
+  height: 175px;
+  margin: 0 10px;
+}
+.border-bottom {
+  border-bottom: 1px solid #e2e2e2;
+  margin: 10px 0px 10px 0;
+}
+
+.grey {
+  color: #e2e2e2;
+}
+
+#grey {
+  color: #e2e2e2;
+}
+
+.container-width {
+  max-width: 800px;
+}
+
+.time {
+  color: #999;
+  font-family: "Hind";
+  font-size: 11px;
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+  cursor: pointer;
+  display: inline-block;
+  min-height: 1em;
+  outline: none;
+  border: none;
+  vertical-align: baseline;
+  background: #e0e1e2 none;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Lato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  margin: 0em 0.25em 0em 0em;
+  padding: 0.78571429em 1.5em 0.78571429em;
+  text-transform: none;
+  text-shadow: none;
+  font-weight: bold;
+  line-height: 1em;
+  font-style: normal;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.28571429rem;
+  -webkit-box-shadow: 0px 0px 0px 1px transparent inset,
+    0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+  box-shadow: 0px 0px 0px 1px transparent inset,
+    0px 0em 0px 0px rgba(34, 36, 38, 0.15) inset;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: opacity 0.1s ease, background-color 0.1s ease,
+    color 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease,
+    background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease,
+    box-shadow 0.1s ease, background 0.1s ease;
+  transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease,
+    box-shadow 0.1s ease, background 0.1s ease, -webkit-box-shadow 0.1s ease;
+  will-change: "";
+  -webkit-tap-highlight-color: transparent;
+}
+
+.blue {
+  background: #0c6695 !important;
+  color: #fff !important;
+}
+
+.segment-active-login {
+  border: none;
+  color: rgb(50, 104, 145);
+  font-family: "Hind";
+  font-size: 0.6rem;
+  text-transform: uppercase;
+}
+
+.message {
+  position: relative;
+  min-height: 1em;
+  margin: 1em 0em;
+  background: #f8f8f9;
+  padding: 1em 1.5em;
+  line-height: 1.4285em;
+  color: rgba(0, 0, 0, 0.87);
+  -webkit-transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease,
+    -webkit-box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease,
+    -webkit-box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease,
+    box-shadow 0.1s ease;
+  transition: opacity 0.1s ease, color 0.1s ease, background 0.1s ease,
+    box-shadow 0.1s ease, -webkit-box-shadow 0.1s ease;
+  border-radius: 0.28571429rem;
+  -webkit-box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.22) inset,
+    0px 0px 0px 0px rgba(0, 0, 0, 0);
+  box-shadow: 0px 0px 0px 1px rgba(34, 36, 38, 0.22) inset,
+    0px 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.error.message {
+  background-color: #fff6f6;
+  color: #9f3a38;
+}
+
+/* Success */
+.success.message {
+  background-color: #fcfff5;
+  color: #2c662d;
+}
+
+@import "../components/header.css";
+@import "../components/sidebar.css";
+@import "../components/footer.css";
+@import "../components/segment.css";
+@import "../components/content.css";
+@import "../components/tabletcontent.css";
+@import "../components/maincontent.css";
+@import "../components/imagelesscontent.css";
+@import "../components/toptabletbar.css";
+@import "../components/fullscreenlinkmenu.css";
+@import "../components/sidecolumn.css";
+@import "../components/fullscreendate.css";
+@import "../components/form.css";
+@import "../components/modal.css";
+@import "../components/loader.css";
+@import "../components/login.css";

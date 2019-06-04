@@ -1,0 +1,169 @@
+/* CELLPHONE */
+@media only screen and (min-width: 0px) and (max-width: 739px) {
+  .Headline {
+    display: none;
+  }
+
+  .border-right {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+  .MainContent,
+  .Headline,
+  .border,
+  .tablet {
+    display: none;
+  }
+
+  .Headline h2 {
+    display: block;
+    text-align: center;
+  }
+
+  .MainContent .section {
+    color: #256793;
+    font-family: "Hind";
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+  }
+  .MainContent {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .MainContent h1 a {
+    color: #222;
+    font-size: 20px;
+    list-style: none;
+  }
+
+  .MainContent-text-wrapper {
+    padding: 5px;
+    display: none;
+  }
+
+  .MainContent-image-wrapper {
+    display: none;
+  }
+
+  .MainContent .time {
+    color: #888;
+    font-family: "Hind";
+    font-size: 12px;
+    margin-top: 10px;
+    padding-left: 5px;
+  }
+
+  .MainContent a {
+    color: #666;
+    display: list-item;
+    font-family: "Crimson Text";
+    font-size: 16px;
+    list-style: circle;
+    list-style-type: disc;
+    margin: 5px;
+  }
+  .MainContent-image-wrapper p {
+    color: #999;
+    font-family: "Crimson Text";
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+
+  .MainContent-image-wrapper img {
+    width: 600px;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 3000px) {
+  .tablet {
+    display: flex;
+    flex-direction: row;
+  }
+  .Headline {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .MainContent {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .MainContent .section {
+    color: #256793;
+    font-family: "Hind";
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 3px 0 3px 0;
+    padding: 0;
+  }
+
+  .MainContent-text-wrapper {
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    font-family: "Crimson Text";
+    font-size: 21px;
+    padding: 10px;
+    width: 50%;
+  }
+
+  .MainContent-text-wrapper .title {
+    margin: 0 0 15px 0;
+  }
+
+  .MainContent-text-wrapper .title a {
+    color: #222;
+    display: block;
+    list-style: none;
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  .MainContent-text-wrapper .bullet a {
+    display: block;
+    font-size: 18px;
+  }
+
+  .MainContent .time {
+    color: #999;
+    font-family: "Hind";
+    font-size: 11px;
+    margin-top: 10px;
+    /* padding-left: 5px; */
+  }
+
+  .MainContent a {
+    color: #666;
+    display: list-item;
+    font-family: "Crimson Text";
+    font-size: 18px;
+    list-style: none;
+  }
+
+  .MainContent a:nth-child(1) {
+    list-style: none;
+  }
+  .MainContent-image-wrapper p {
+    color: #999;
+    font-family: "Crimson Text";
+    font-size: 0.8rem;
+    margin-top: 5px;
+  }
+
+  .MainContent-image-wrapper img {
+    height: 400px;
+    width: 700px;
+  }
+}

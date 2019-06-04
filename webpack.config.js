@@ -1,6 +1,5 @@
 const path = require("path");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const webpack = require("webpack");
+const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
 
@@ -12,10 +11,9 @@ if (process.env.NODE_ENV === "test") {
 
 module.exports = env => {
   const isProduction = env === "production";
-  const CSSExtract = new ExtractTextPlugin("styles.css");
-
   return {
-    entry: ["babel-polyfill", "./src/app.js"],
+    mode: process.env.NODE_ENV,
+    entry: ["./src/app.js"],
     output: {
       path: path.join(__dirname, "public", "dist"),
       filename: "bundle.js"
@@ -23,32 +21,50 @@ module.exports = env => {
     module: {
       rules: [
         {
-          loader: "babel-loader",
-          test: /\.js$/,
-          exclude: /node_modules/
+          test: /\.(js|jsx)$/,
+          exclude: /node_modules/,
+          use: {
+            loader: "babel-loader",
+            options: {
+              presets: ["@babel/preset-env", "@babel/preset-react"],
+              plugins: [
+                "@babel/plugin-proposal-class-properties",
+                "@babel/plugin-syntax-object-rest-spread",
+                "@babel/plugin-transform-react-jsx"
+              ]
+            }
+          }
         },
         {
           test: /\.s?css$/,
-          use: CSSExtract.extract({
-            use: [
-              {
-                loader: "css-loader",
-                options: {
-                  sourceMap: true
-                }
-              },
-              {
-                loader: "sass-loader",
-                options: {
-                  sourceMap: true
-                }
-              }
-            ]
-          })
+          use: ["style-loader", "css-loader"]
+        },
+        {
+          test: /\.(png|svg|jpg|jpeg|gif)$/,
+          use: ["file-loader"]
+        },
+        {
+          test: /\.(html)$/,
+          use: {
+            loader: "html-loader",
+            options: {
+              attrs: [":data-src"]
+            }
+          }
+        },
+        {
+          test: /\.(woff|woff2|eot|ttf|otf)$/,
+          use: ["file-loader"]
         }
       ]
     },
-    plugins: [CSSExtract],
+    plugins: [
+      new HtmlWebPackPlugin({
+        hash: true,
+        template: "./public/index.html",
+        filename: "index.html"
+      })
+    ],
     devtool: isProduction ? "source-map" : "inline-source-map",
     devServer: {
       contentBase: path.join(__dirname, "public"),

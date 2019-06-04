@@ -5,7 +5,7 @@ import _ from "lodash";
 import Loader from "../partials/loader";
 
 // Return a function the outputs jsx for mobile screen view: arguments = props
-const OutputMobileOpinionContent = ({ props }) => {
+const Opinion = ({ props }) => {
   if (!props.times.opinion) {
     return <Loader />;
   }
@@ -67,4 +67,4 @@ const OutputMobileOpinionContent = ({ props }) => {
   });
 };
 
-export default OutputMobileOpinionContent;
+export default Opinion;

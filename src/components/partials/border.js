@@ -8,31 +8,24 @@ export const Border = () => {
   );
 };
 
-
-
-const renderGreyBorder = (location, props) => { 
-
-
-  switch(location) { 
-    case '/login': 
-      return null; 
-    case '/subscribe': 
-      return null; 
-    default: 
+const renderGreyBorder = (location, props) => {
+  switch (location) {
+    case "/login":
+      return null;
+    case "/subscribe":
+      return null;
+    default:
       return (
         <div className="container">
-        <div className="grey-border" />
-      </div>
-      )
+          <div className="grey-border" />
+        </div>
+      );
   }
+};
 
-
-}; 
-
-export const GreyBorder = (props) => {
-  
-  let location = props.location.pathname; 
-  return renderGreyBorder(location, props); 
+export const GreyBorder = props => {
+  let location = props.location.pathname;
+  return renderGreyBorder(location, props);
 };
 
 export const BorderRight = () => {

@@ -1,0 +1,121 @@
+@media only screen and (min-width: 0px) and (max-width: 739px) {
+  .ImagelessContent {
+    display: none;
+  }
+
+  .ImagelessContent__content p {
+    color: #666;
+    display: list-item;
+    list-style: disc;
+  }
+
+  .ImagelessContent__content.one {
+  }
+
+  .ImagelessContent__content.two {
+    font-weight: 800;
+    padding: 10px;
+    width: 45%;
+  }
+
+  .ImagelessContent__content.two h3 {
+    color: #222;
+    font-size: 1.2rem;
+    font-weight: bolder;
+  }
+}
+
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+  .ImagelessContent {
+    border-top: 1px solid #121212;
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 16px;
+  }
+
+  .ImagelessContent__content p {
+    color: #666;
+    display: list-item;
+    list-style: disc;
+  }
+  .ImagelessContent__content.one {
+    /* background: pink; */
+    border-right: 1px solid #e2e2e2;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .ImagelessContent__content.two {
+    font-weight: 800;
+    padding: 0 10px;
+    width: 100%;
+  }
+
+  .ImagelessContent__content.two h3 {
+    color: #222;
+    font-size: 1.2rem;
+    font-weight: bolder;
+  }
+
+  .ImagelessContent .SideColumn span {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 3000px) {
+  .ImagelessContent {
+    border-top: 1px solid #e2e2e2;
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 16px;
+  }
+
+  .ImagelessContent .border-right {
+    /* display: block; */
+    /* height: 300px; */
+    /* margin: 25px 20px; */
+  }
+
+  .ImagelessContent__content p {
+    color: #666;
+    display: list-item;
+    list-style: disc;
+  }
+
+  .ImagelessContent__content.one {
+    /* background: pink; */
+    border-right: 1px solid #e2e2e2;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .ImagelessContent__content.two {
+    font-weight: 800;
+    padding: 0 6px;
+    width: 100%;
+  }
+
+  .ImagelessContent__content.two h3 {
+    color: #222;
+    font-size: 1.2rem;
+    font-weight: bolder;
+  }
+
+  .ImagelessContent .SideColumn span {
+    display: block;
+    margin: 10px 0;
+  }
+}
