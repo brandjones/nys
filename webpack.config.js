@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
 
@@ -16,7 +17,7 @@ module.exports = env => {
     entry: ["./src/app.js"],
     output: {
       path: path.join(__dirname, "public", "dist"),
-      filename: "bundle.js" //
+      filename: "bundle.js"
     },
     module: {
       rules: [

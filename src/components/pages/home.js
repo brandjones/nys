@@ -17,7 +17,26 @@ class Home extends React.Component {
   }
   render() {
     const { props } = this;
-    return <h1> This is home </h1>;
+    return (
+      <div>
+        <Segment
+          time={props.time}
+          styles={props.segment}
+          match={props.match}
+          history={props.history}
+          location={props.location}
+        />
+
+        <div className="container">
+          <Content history={props.history} props={props} />
+          <div className="tablet">
+            <TabletContent history={props.history} />
+          </div>
+          <DoubleBorder />
+          <MainContent history={this.props.history} />
+        </div>
+      </div>
+    );
   }
 }
 
@@ -28,21 +47,3 @@ const mapStateToProps = state => {
 };
 
 export default connect(mapStateToProps)(Home);
-// <div>
-//   <Segment
-//     time={props.time}
-//     styles={props.segment}
-//     match={props.match}
-//     history={props.history}
-//     location={props.location}
-//   />
-
-//   <div className="container">
-//     <Content history={props.history} props={props} />
-//     <div className="tablet">
-//       <TabletContent history={props.history} />
-//     </div>
-//     <DoubleBorder />
-//     <MainContent history={this.props.history} />
-//   </div>
-// </div>

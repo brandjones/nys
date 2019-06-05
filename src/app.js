@@ -87,17 +87,19 @@ class Sentinel extends React.Component {
     this.pathname = window.location.pathname;
     this.interval = setInterval(() => this.tick(), 1000);
 
-    // await store.dispatch(getWorldData());
-    // await store.dispatch(getArtsData());
-    // await store.dispatch(getNationalData());
-    // await store.dispatch(getPoliticsData());
-    // await store.dispatch(getTechnologyData());
-    // await store.dispatch(getHealthData());
-    // await store.dispatch(getBusinessData());
-    // await store.dispatch(getOpinionData());
-    // await store.dispatch(getScienceData());
-    // await store.dispatch(getSportsData());
-    // await store.dispatch(getBooksData());
+    console.log(this.app);
+
+    await store.dispatch(getWorldData());
+    await store.dispatch(getArtsData());
+    await store.dispatch(getNationalData());
+    await store.dispatch(getPoliticsData());
+    await store.dispatch(getTechnologyData());
+    await store.dispatch(getHealthData());
+    await store.dispatch(getBusinessData());
+    await store.dispatch(getOpinionData());
+    await store.dispatch(getScienceData());
+    await store.dispatch(getSportsData());
+    await store.dispatch(getBooksData());
   }
 
   componnentWillUnmount() {
@@ -126,28 +128,7 @@ class Sentinel extends React.Component {
       <Provider store={store}>
         <BrowserRouter>
           <div ref={this.app}>
-            <Footer />
-          </div>
-        </BrowserRouter>
-      </Provider>
-    );
-  }
-}
-
-const App = props => {
-  return <h1> Nice App </h1>;
-};
-
-// return <Loader props={props} /> && <Sentinel />;
-
-// App.defaultProps = {
-//   home: "Please wait while the application loads..."
-// };
-
-ReactDOM.render(<App />, document.querySelector("#app"));
-
-{
-  /* <Route
+            <Route
               exact
               path="*"
               render={({ match, location, history }) => (
@@ -229,11 +210,9 @@ ReactDOM.render(<App />, document.querySelector("#app"));
                   )}
                 />
               </div>
-            </div> */
-}
+            </div>
 
-{
-  /* <Route
+            <Route
               exact
               path="*"
               render={({ match, location, history }) => (
@@ -247,11 +226,9 @@ ReactDOM.render(<App />, document.querySelector("#app"));
                   state={this.state}
                 />
               )}
-            /> */
-}
+            />
 
-{
-  /* <Route
+            <Route
               exact
               path="/"
               styles
@@ -266,10 +243,8 @@ ReactDOM.render(<App />, document.querySelector("#app"));
                   history={history}
                 />
               )}
-            /> */
-}
-{
-  /* 
+            />
+
             <Route
               path="/world"
               render={({ match, location, history }) => (
@@ -564,5 +539,14 @@ ReactDOM.render(<App />, document.querySelector("#app"));
                   toggleUserMenuState={this.toggleUserMenuState}
                 />
               )}
-            /> */
+            />
+
+            <Footer />
+          </div>
+        </BrowserRouter>
+      </Provider>
+    );
+  }
 }
+
+ReactDOM.render(<Sentinel />, document.querySelector("#app"));

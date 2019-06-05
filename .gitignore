@@ -1,13 +1,7 @@
 /node_modules/
 public/dist/
 /server
-.env
-.env.test
-.env.development
 
-
-
-/node_modules
 npm-debug.log
 .DS_Store
 /*.env
