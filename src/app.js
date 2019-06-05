@@ -30,7 +30,7 @@ import { GreyBorder } from "../src/components/partials/border";
 import FullScreenLinkMenu from "../src/components/partials/fullscreenlinkmenu";
 import FullScreenDate from "../src/components/partials/fullscreendate";
 import Modal from "../src/components/partials/modal";
-import Spinner from "../src/components/partials/spinner";
+import Loader from "../src/components/partials/loader";
 
 import {
   getWorldData,
@@ -126,7 +126,28 @@ class Sentinel extends React.Component {
       <Provider store={store}>
         <BrowserRouter>
           <div ref={this.app}>
-            {/* <Route
+            <Footer />
+          </div>
+        </BrowserRouter>
+      </Provider>
+    );
+  }
+}
+
+const App = props => {
+  return <h1> Nice App </h1>;
+};
+
+// return <Loader props={props} /> && <Sentinel />;
+
+// App.defaultProps = {
+//   home: "Please wait while the application loads..."
+// };
+
+ReactDOM.render(<App />, document.querySelector("#app"));
+
+{
+  /* <Route
               exact
               path="*"
               render={({ match, location, history }) => (
@@ -208,9 +229,11 @@ class Sentinel extends React.Component {
                   )}
                 />
               </div>
-            </div> */}
+            </div> */
+}
 
-            {/* <Route
+{
+  /* <Route
               exact
               path="*"
               render={({ match, location, history }) => (
@@ -224,9 +247,11 @@ class Sentinel extends React.Component {
                   state={this.state}
                 />
               )}
-            /> */}
+            /> */
+}
 
-            {/* <Route
+{
+  /* <Route
               exact
               path="/"
               styles
@@ -241,8 +266,10 @@ class Sentinel extends React.Component {
                   history={history}
                 />
               )}
-            /> */}
-            {/* 
+            /> */
+}
+{
+  /* 
             <Route
               path="/world"
               render={({ match, location, history }) => (
@@ -537,22 +564,5 @@ class Sentinel extends React.Component {
                   toggleUserMenuState={this.toggleUserMenuState}
                 />
               )}
-            /> */}
-
-            <Footer />
-          </div>
-        </BrowserRouter>
-      </Provider>
-    );
-  }
+            /> */
 }
-
-const App = props => {
-  return <Spinner props={props} /> && <Sentinel />;
-};
-
-App.defaultProps = {
-  home: "Please wait while the application loads..."
-};
-
-ReactDOM.render(<App />, document.querySelector("#app"));
