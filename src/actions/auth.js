@@ -22,6 +22,10 @@ export const login = (email, password, session, history) => async dispatch => {
   });
 };
 
+/**
+ * Should subscribe user to application.
+ */
+
 export const subscribe = (email, password, session) => async dispatch => {
   const response = await axios.post("/api/user/subscribe", {
     email,
