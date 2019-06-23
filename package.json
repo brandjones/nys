@@ -8,7 +8,7 @@
   "author": "Brandon Jones",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon server/server.js",
+    "start": "node server/server.js",
     "serve": "concurrently \"nodemon server/server.js\" \"yarn run dev\"",
     "dev": "yarn run build:dev",
     "build": "webpack",
