@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "main": "server.js",
   "engines": {
-    "node": "12.4.0"
+    "node": "12.4.0",
+    "npm": "6.9.0",
+    "yarn": "1.16.0"
   },
   "author": "Brandon Jones",
   "license": "MIT",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "NODE_ENV=production yarn run server/server.js",
     "serve": "concurrently \"nodemon server/server.js\" \"yarn run dev\"",
     "dev": "yarn run build:dev",
     "build": "webpack",
