@@ -1,11 +1,10 @@
 const regeneratorRuntime = require("regenerator-runtime");
+import "core-js";
 import React from "react";
 import { Provider } from "react-redux";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { DotLoader } from "react-spinners";
-
-import moment from "moment";
 
 /**
  * Import Partials.
