@@ -14,7 +14,7 @@ module.exports = env => {
   const isProduction = env === "production";
   return {
     mode: process.env.NODE_ENV,
-    entry: ["./server.js"],
+    entry: ["./src/app.js"],
     output: {
       path: path.join(__dirname, "public", "dist"),
       filename: "bundle.js"
