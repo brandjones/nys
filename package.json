@@ -10,14 +10,13 @@
   "author": "Brandon Jones",
   "license": "MIT",
   "scripts": {
-    "start": "NODE_ENV=production yarn run server/server.js",
+    "start": "NODE_ENV=production node server/server.js",
     "serve": "concurrently \"nodemon server/server.js\" \"yarn run dev\"",
     "dev": "yarn run build:dev",
     "build": "webpack",
     "build:prod": "webpack -p --env production",
     "dev-server": "webpack-dev-server",
-    "test": "cross-env NODE_ENV=test jest --config=jest.config.json",
-    "heroku-postbuild": "yarn run build:prod"
+    "test": "cross-env NODE_ENV=test jest --config=jest.config.json"
   },
   "dependencies": {
     "@babel/core": "7.0.0",
