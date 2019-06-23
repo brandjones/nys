@@ -2,7 +2,6 @@ html {
   min-height: 100%;
   margin: 0;
   padding: 0;
-  /* position: relative; */
 }
 
 body {
@@ -12,7 +11,6 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
-  /* max-height: 100%; */
 }
 
 a {
@@ -20,12 +18,15 @@ a {
   color: #222;
 }
 
+/* Image Transitions  */
+
 .image {
   position: relative;
   display: inline-block;
   vertical-align: middle;
   max-width: 100%;
   background-color: transparent;
+  opacity: 1;
 }
 
 .divider {
@@ -36,7 +37,9 @@ a {
 
 .forum {
   border-bottom: 0.5px solid #e2e2e2;
-  font-family: "Forum";
+  font-family: "Philosopher";
+  font-size: 18px;
+  text-transform: uppercase;
   margin: 10px;
   padding: 5px;
 }
@@ -218,19 +221,33 @@ a {
   color: #2c662d;
 }
 
+/* Fonts  */
+@import url("https://fonts.googleapis.com/css?family=Hind:400,500|Philosopher&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Crimson+Text&display=swap");
+
+/* Libraries */
+@import url("https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/icon.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/card.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/comment.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/image.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css");
+
 @import "../components/header.css";
-@import "../components/sidebar.css";
 @import "../components/footer.css";
 @import "../components/segment.css";
 @import "../components/content.css";
 @import "../components/tabletcontent.css";
-@import "../components/maincontent.css";
-@import "../components/imagelesscontent.css";
 @import "../components/toptabletbar.css";
 @import "../components/fullscreenlinkmenu.css";
-@import "../components/sidecolumn.css";
 @import "../components/fullscreendate.css";
 @import "../components/form.css";
 @import "../components/modal.css";
 @import "../components/loader.css";
 @import "../components/login.css";
+
+@media only screen and (min-width: 740px) and (max-width: 3000px) {
+  .forum {
+    display: none;
+    font-family: "Philosopher";
+  }
+}

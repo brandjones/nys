@@ -55,6 +55,86 @@
 
 @media only screen and (min-width: 1024px) and (max-width: 3000px) {
   .RenderContent {
+    /* border: 5px solid orange; */
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 15px auto;
+  }
+
+  .RenderContent :nth-of-type(2) {
+    /* background: aqua; */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .RenderContent :nth-of-type(2) h3 {
+    display: block;
+    /* background: maroon; */
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .RenderContent__title {
+    font-family: "Crimson Text";
+    font-size: 1.2rem;
+    font-style: bold;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+
+  .RenderContent__title h3 {
+    padding: 0;
+    margin: 0;
+  }
+
+  .RenderContent__abstract {
+    /* border: 2px solid pink; */
+
+    color: #666;
+    padding: 0;
+    margin: 0;
+    width: 90%;
+  }
+
+  .RenderContent .column {
+    /* border: 2px solid pink; */
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin-right: 15px;
+  }
+
+  .RenderContent-image-wrapper {
+    /* border: 2px solid purple; */
+    height: 92%;
+    width: 80%;
+    /* margin: 10px; */
+  }
+
+  .link-wrapper {
+    /* border: 2px solid palevioletred; */
+    /* display: inline-block; */
+    /* width: 92%;
+    max-width: 100%;
+    height: 90%;
+    margin: 15px;
+    padding: 0; */
+  }
+
+  .link-wrapper img {
+    display: block;
+    width: 90%;
+    height: 90%;
+    max-width: 100%;
+    /* max-height: 270px; */
+  }
+
+  .divider {
     display: none;
   }
 }

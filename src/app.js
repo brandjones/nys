@@ -2,12 +2,24 @@ const regeneratorRuntime = require("regenerator-runtime");
 import React from "react";
 import { Provider } from "react-redux";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import { DotLoader } from "react-spinners";
+
 import moment from "moment";
 
-// Should return pages within the application.
-import Home from "../src/components/pages/home";
-import LoginPage from "../src/components/pages/login";
+/**
+ * Import Partials.
+ */
+
+import Modal from "../src/components/partials/modal";
+import TopMenu from "../src/components/partials/topmenu";
+
+/**
+ * Import Pages.
+ */
+
+import Footer from "../src/components/partials/footer";
+import Login from "../src/components/pages/login";
 import Subscribe from "../src/components/pages/subscribe";
 import Technology from "../src/components/pages/technology";
 import World from "../src/components/pages/world";
@@ -20,530 +32,75 @@ import Science from "../src/components/pages/science";
 import Sports from "../src/components/pages/sports";
 import Books from "../src/components/pages/books";
 import Arts from "../src/components/pages/arts";
-
-// Should return components within the application.
-import Header from "../src/components/partials/header";
-import Sidebar from "../src/components/partials/sidebar";
-import Footer from "../src/components/partials/footer";
-import TopTabletBar from "../src/components/partials/toptabletbar";
-import { GreyBorder } from "../src/components/partials/border";
-import FullScreenLinkMenu from "../src/components/partials/fullscreenlinkmenu";
-import FullScreenDate from "../src/components/partials/fullscreendate";
-import Modal from "../src/components/partials/modal";
-import Loader from "../src/components/partials/loader";
-
-import {
-  getWorldData,
-  getArtsData,
-  getNationalData,
-  getPoliticsData,
-  getTechnologyData,
-  getHealthData,
-  getBusinessData,
-  getOpinionData,
-  getScienceData,
-  getSportsData,
-  getBooksData
-} from "./actions/times";
+import Home from "../src/components/pages/home";
 
 import { store } from "./store";
 import "../src/styles/base/base.css";
 
-// helper function obj.
-import EVENT from "./event";
-/*
-1. Once the application renders to the screen make a request to the NYT API
-2. Make sure there is a loader because the request will take some amount of time
-3. Render all the content on the screen by accessing the correct properties
-4. Connect to the unsplashed API if need be to get images
-*/
-
-//
+import { setTime, stopTime } from "./actions/ui";
 
 class Sentinel extends React.Component {
   constructor(props) {
     super(props);
-
-    this.app = React.createRef();
-
     this.state = {
-      time: moment().format("MMMM Do YYYY, h:mm:ss a"),
-      userMenuState: false,
-      hamburgerMenuState: false,
       email: "",
       loading: false,
       password: "",
-      note: true
+      loading: true
     };
   }
 
-  tick() {
-    this.setState(previousstate => ({
-      time: moment().format("MMMM Do YYYY, h:mm:ss a")
-    }));
+  componentDidMount() {
+    setTimeout(() => this.setState({ loading: false }), 1000);
   }
-
-  async componentDidMount() {
-    this.pathname = window.location.pathname;
-    this.interval = setInterval(() => this.tick(), 1000);
-
-    console.log(this.app);
-
-    await store.dispatch(getWorldData());
-    await store.dispatch(getArtsData());
-    await store.dispatch(getNationalData());
-    await store.dispatch(getPoliticsData());
-    await store.dispatch(getTechnologyData());
-    await store.dispatch(getHealthData());
-    await store.dispatch(getBusinessData());
-    await store.dispatch(getOpinionData());
-    await store.dispatch(getScienceData());
-    await store.dispatch(getSportsData());
-    await store.dispatch(getBooksData());
-  }
-
-  componnentWillUnmount() {
-    clearInterval(this.interval);
-  }
-
-  toggleHamburgerState = event => {
-    const node = this;
-    return EVENT.toggleHamburgerState(event, node);
-  };
-
-  toggleUserMenuState = event => {
-    const node = this;
-    return EVENT.toggleUserMenuState(event, node);
-  };
-
-  onLogoffClick = event => {
-    const node = this;
-    return EVENT.onLogoffClick(event, node, store);
-  };
 
   render() {
-    const node = this.app.current;
-    const session = window;
+    if (this.state.loading) {
+      return (
+        <div className="DotLoader">
+          <div className="DotLoader-container">
+            <DotLoader
+              sizeUnit={"px"}
+              size={175}
+              color={"#333"}
+              loading={this.state.loading}
+              margin="2px"
+            />
+          </div>
+        </div>
+      );
+    }
     return (
       <Provider store={store}>
-        <BrowserRouter>
-          <div ref={this.app}>
-            <Route
-              exact
-              path="*"
-              render={({ match, location, history }) => (
-                <Modal
-                  match={match}
-                  history={history}
-                  location={location}
-                  state={this.state}
-                  node={node}
-                  onClick={this.onLogoffClick}
-                  toggleHamburgerState={this.toggleHamburgerState}
-                  toggleUserMenuState={this.toggleUserMenuState}
-                />
-              )}
-            />
+        <Router>
+          <Route
+            children={({ match }) => {
+              return (
+                <div>
+                  <Route component={TopMenu} />
+                  <Modal />
+                  <Route component={Home} exact path="/" />
+                  <Route component={Arts} path="/arts" />
+                  <Route component={Books} path="/books" />
+                  <Route component={Business} path="/business" />
+                  <Route component={Health} path="/health" />
+                  <Route component={National} path="/national" />
+                  <Route component={Politics} path="/politics" />
+                  <Route component={Science} path="/science" />
+                  <Route component={Sports} path="/sports" />
+                  <Route component={Technology} path="/technology" />
+                  <Route component={World} path="/world" />
+                  <Route component={Opinion} path="/opinion" />
 
-            <div>
-              <div className="container">
-                <Route
-                  exact
-                  render={({ match, location, history }) => (
-                    <TopTabletBar
-                      toggleHamburgerState={this.toggleHamburgerState}
-                      toggleUserMenuState={this.toggleUserMenuState}
-                      node={node}
-                      match={match}
-                      history={history}
-                      location={location}
-                      state={this.state}
-                    />
-                  )}
-                />
-              </div>
-              <div>
-                <Route
-                  exact
-                  render={({ match, location, history }) => (
-                    <FullScreenDate
-                      toggleHamburgerState={this.toggleHamburgerState}
-                      toggleUserMenuState={this.toggleUserMenuState}
-                      node={node}
-                      time={this.state.time}
-                      match={match}
-                      history={history}
-                      location={location}
-                      state={this.state}
-                    />
-                  )}
-                />
+                  <Route component={Login} path="/login" />
+                  <Route component={Subscribe} path="/subscribe" />
 
-                <Route
-                  exact
-                  path="*"
-                  render={({ match, location, history }) => (
-                    <GreyBorder
-                      toggleHamburgerState={this.toggleHamburgerState}
-                      toggleUserMenuState={this.toggleUserMenuState}
-                      node={node}
-                      match={match}
-                      history={history}
-                      location={location}
-                      state={this.state}
-                    />
-                  )}
-                />
-
-                <Route
-                  exact
-                  render={({ match, location, history }) => (
-                    <FullScreenLinkMenu
-                      toggleHamburgerState={this.toggleHamburgerState}
-                      toggleUserMenuState={this.toggleUserMenuState}
-                      node={node}
-                      match={match}
-                      history={history}
-                      location={location}
-                      state={this.state}
-                    />
-                  )}
-                />
-              </div>
-            </div>
-
-            <Route
-              exact
-              path="*"
-              render={({ match, location, history }) => (
-                <Header
-                  toggleHamburgerState={this.toggleHamburgerState}
-                  toggleUserMenuState={this.toggleUserMenuState}
-                  node={node}
-                  match={match}
-                  history={history}
-                  location={location}
-                  state={this.state}
-                />
-              )}
-            />
-
-            <Route
-              exact
-              path="/"
-              styles
-              render={({ match, location, history }) => (
-                <Home
-                  time={this.state.time}
-                  onClick={this.state.onLoginClick}
-                  state={this.state}
-                  results={this.state.results}
-                  match={match}
-                  location={location}
-                  history={history}
-                />
-              )}
-            />
-
-            <Route
-              path="/world"
-              render={({ match, location, history }) => (
-                <World
-                  onChange={event => {
-                    const node = this;
-                    return EVENT.onLoginFormChange(event, node, store);
-                  }}
-                  onClick={event => {
-                    const node = this;
-                    event.preventDefault();
-                    return EVENT.onLoginButtonClick(
-                      event,
-                      node,
-                      store,
-                      match,
-                      location,
-                      history,
-                      session
-                    );
-                  }}
-                  session={session}
-                  email={this.state.email}
-                  password={this.state.password}
-                  match={match}
-                  history={history}
-                  location={location}
-                />
-              )}
-            />
-
-            <Route
-              path="/arts"
-              render={({ match, location, history }) => (
-                <Arts
-                  onChange={event => {
-                    const node = this;
-                    return EVENT.onLoginFormChange(event, node, store);
-                  }}
-                  onClick={event => {
-                    const node = this;
-                    event.preventDefault();
-                    return EVENT.onLoginButtonClick(
-                      event,
-                      node,
-                      store,
-                      match,
-                      location,
-                      history,
-                      session
-                    );
-                  }}
-                  session={session}
-                  email={this.state.email}
-                  password={this.state.password}
-                  match={match}
-                  history={history}
-                  location={location}
-                />
-              )}
-            />
-
-            <Route
-              exact
-              path="/books"
-              styles
-              render={({ match, location, history }) => (
-                <Books
-                  time={this.state.time}
-                  onClick={this.state.onLoginClick}
-                  state={this.state}
-                  results={this.state.results}
-                  match={match}
-                  location={location}
-                  history={history}
-                />
-              )}
-            />
-
-            <Route
-              path="/science"
-              render={({ match, location, history }) => (
-                <Science
-                  onChange={event => {
-                    const node = this;
-                    return EVENT.onLoginFormChange(event, node, store);
-                  }}
-                  onClick={event => {
-                    const node = this;
-                    event.preventDefault();
-                    return EVENT.onLoginButtonClick(
-                      event,
-                      node,
-                      store,
-                      match,
-                      location,
-                      history,
-                      session
-                    );
-                  }}
-                  session={session}
-                  email={this.state.email}
-                  password={this.state.password}
-                  match={match}
-                  history={history}
-                  location={location}
-                />
-              )}
-            />
-            <Route
-              path="/sports"
-              render={({ location, match, history }) => (
-                <Sports
-                  onChange={event => {
-                    const node = this;
-                    return EVENT.onSubscribeFormChange(event, node, store);
-                  }}
-                  onClick={event => {
-                    const node = this;
-                    event.preventDefault();
-                    return EVENT.onSubscribeButtonClick(
-                      event,
-                      node,
-                      store,
-                      match,
-                      location,
-                      history
-                    );
-                  }}
-                  email={this.state.email}
-                  password={this.state.password}
-                  match={match}
-                  history={history}
-                  location={location}
-                />
-              )}
-            />
-
-            <Route
-              path="/login"
-              render={({ match, location, history }) => (
-                <LoginPage
-                  onChange={event => {
-                    const node = this;
-                    return EVENT.onLoginFormChange(event, node, store);
-                  }}
-                  onClick={event => {
-                    const node = this;
-                    event.preventDefault();
-                    return EVENT.onLoginButtonClick(
-                      event,
-                      node,
-                      store,
-                      match,
-                      location,
-                      history,
-                      session
-                    );
-                  }}
-                  session={session}
-                  email={this.state.email}
-                  password={this.state.password}
-                  match={match}
-                  history={history}
-                  location={location}
-                />
-              )}
-            />
-
-            <Route
-              path="/subscribe"
-              render={({ location, match, history }) =>
-                match ? (
-                  <Subscribe
-                    onChange={event => {
-                      const node = this;
-                      return EVENT.onSubscribeFormChange(event, node, store);
-                    }}
-                    onClick={event => {
-                      const node = this;
-                      event.preventDefault();
-                      return EVENT.onSubscribeButtonClick(
-                        event,
-                        node,
-                        store,
-                        match,
-                        location,
-                        history
-                      );
-                    }}
-                    email={this.state.email}
-                    password={this.state.password}
-                    match={match}
-                    history={history}
-                    location={location}
-                  />
-                ) : null
-              }
-            />
-
-            <Route
-              path="/technology"
-              render={({ match, location, history }) => (
-                <Technology
-                  match={match}
-                  history={history}
-                  location={location}
-                  state={this.state}
-                  node={node}
-                  onClick={this.onLogoffClick}
-                  toggleHamburgerState={this.toggleHamburgerState}
-                  toggleUserMenuState={this.toggleUserMenuState}
-                />
-              )}
-            />
-
-            <Route
-              path="/business"
-              render={({ match, location, history }) => (
-                <Business
-                  match={match}
-                  history={history}
-                  location={location}
-                  state={this.state}
-                  node={node}
-                  onClick={this.onLogoffClick}
-                  toggleHamburgerState={this.toggleHamburgerState}
-                  toggleUserMenuState={this.toggleUserMenuState}
-                />
-              )}
-            />
-
-            <Route
-              path="/opinion"
-              render={({ match, location, history }) => (
-                <Opinion
-                  match={match}
-                  history={history}
-                  location={location}
-                  state={this.state}
-                  node={node}
-                  onClick={this.onLogoffClick}
-                  toggleHamburgerState={this.toggleHamburgerState}
-                  toggleUserMenuState={this.toggleUserMenuState}
-                />
-              )}
-            />
-
-            <Route
-              path="/politics"
-              render={({ match, location, history }) => (
-                <Politics
-                  match={match}
-                  history={history}
-                  location={location}
-                  state={this.state}
-                  node={node}
-                  onClick={this.onLogoffClick}
-                  toggleHamburgerState={this.toggleHamburgerState}
-                  toggleUserMenuState={this.toggleUserMenuState}
-                />
-              )}
-            />
-
-            <Route
-              path="/health"
-              render={({ match, location, history }) => (
-                <Health
-                  match={match}
-                  history={history}
-                  location={location}
-                  state={this.state}
-                  node={node}
-                  onClick={this.onLogoffClick}
-                  toggleHamburgerState={this.toggleHamburgerState}
-                  toggleUserMenuState={this.toggleUserMenuState}
-                />
-              )}
-            />
-
-            <Route
-              path="/national"
-              render={({ match, location, history }) => (
-                <National
-                  match={match}
-                  history={history}
-                  location={location}
-                  state={this.state}
-                  node={node}
-                  onClick={this.onLogoffClick}
-                  toggleHamburgerState={this.toggleHamburgerState}
-                  toggleUserMenuState={this.toggleUserMenuState}
-                />
-              )}
-            />
-
-            <Footer />
-          </div>
-        </BrowserRouter>
+                  <Footer />
+                </div>
+              );
+            }}
+          />
+        </Router>
       </Provider>
     );
   }

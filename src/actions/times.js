@@ -14,6 +14,11 @@ import {
   GET_BOOKS_DATA
 } from "./types";
 
+/**
+ * This action creator makes a get request to the New York Times API for articles of the
+ * "world" subject area. The action creator itself does not accept any parameters.
+ */
+
 export const getWorldData = () => async dispatch => {
   const response = await axios.get(
     "http://api.nytimes.com/svc/topstories/v2/world.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
@@ -23,6 +28,11 @@ export const getWorldData = () => async dispatch => {
     payload: response
   });
 };
+
+/**
+ * This action creator makes a get request to the New York Times API for articles of the
+ * "arts" subject area. The action creator itself does not accept any parameters.
+ */
 
 export const getArtsData = () => async dispatch => {
   const response = await axios.get(
@@ -34,6 +44,11 @@ export const getArtsData = () => async dispatch => {
   });
 };
 
+/**
+ * This action creator makes a get request to the New York Times API for articles of the
+ * "national" subject area. The action creator itself does not accept any parameters.
+ */
+
 export const getNationalData = () => async dispatch => {
   const response = await axios.get(
     "http://api.nytimes.com/svc/topstories/v2/national.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
@@ -43,6 +58,11 @@ export const getNationalData = () => async dispatch => {
     payload: response
   });
 };
+
+/**
+ * This action creator makes a get request to the New York Times API for articles of the
+ * "politics" subject area. The action creator itself does not accept any parameters.
+ */
 
 export const getPoliticsData = () => async dispatch => {
   const response = await axios.get(
@@ -54,6 +74,11 @@ export const getPoliticsData = () => async dispatch => {
   });
 };
 
+/**
+ * This action creator makes a get request to the New York Times API for articles of the
+ * "technology" subject area. The action creator itself does not accept any parameters.
+ */
+
 export const getTechnologyData = () => async dispatch => {
   const response = await axios.get(
     "http://api.nytimes.com/svc/topstories/v2/technology.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
@@ -63,6 +88,11 @@ export const getTechnologyData = () => async dispatch => {
     payload: response
   });
 };
+
+/**
+ * This action creator makes a get request to the New York Times API for articles of the
+ * "health" subject area. The action creator itself does not accept any parameters.
+ */
 
 export const getHealthData = () => async dispatch => {
   const response = await axios.get(
@@ -74,6 +104,11 @@ export const getHealthData = () => async dispatch => {
   });
 };
 
+/**
+ * This action creator makes a get request to the New York Times API for articles of the
+ * "business" subject area. The action creator itself does not accept any parameters.
+ */
+
 export const getBusinessData = () => async dispatch => {
   const response = await axios.get(
     "http://api.nytimes.com/svc/topstories/v2/business.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
@@ -83,6 +118,12 @@ export const getBusinessData = () => async dispatch => {
     payload: response
   });
 };
+
+/**
+ * This action creator makes a get request to the New York Times API for articles of the
+ * "opinion" subject area. The action creator itself does not accept any parameters.
+ * This data is only used in the tabletcontent component and it is limited to three articles.
+ */
 
 export const getOpinionData = () => async dispatch => {
   const response = await axios.get(
@@ -94,6 +135,11 @@ export const getOpinionData = () => async dispatch => {
   });
 };
 
+/**
+ * This action creator makes a get request to the New York Times API for articles of the
+ * "science" subject area. The action creator itself does not accept any parameters.
+ */
+
 export const getScienceData = () => async dispatch => {
   const response = await axios.get(
     "http://api.nytimes.com/svc/topstories/v2/science.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
@@ -104,6 +150,11 @@ export const getScienceData = () => async dispatch => {
   });
 };
 
+/**
+ * This action creator makes a get request to the New York Times API for articles of the
+ * "sports" subject area. The action creator itself does not accept any parameters.
+ */
+
 export const getSportsData = () => async dispatch => {
   const response = await axios.get(
     "http://api.nytimes.com/svc/topstories/v2/sports.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
@@ -113,6 +164,11 @@ export const getSportsData = () => async dispatch => {
     payload: response
   });
 };
+
+/**
+ * This action creator makes a get request to the New York Times API for articles of the
+ * "books" subject area. The action creator itself does not accept any parameters.
+ */
 
 export const getBooksData = () => async dispatch => {
   const response = await axios.get(

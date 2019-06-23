@@ -31,7 +31,8 @@ module.exports = env => {
               plugins: [
                 "@babel/plugin-proposal-class-properties",
                 "@babel/plugin-syntax-object-rest-spread",
-                "@babel/plugin-transform-react-jsx"
+                "@babel/plugin-transform-react-jsx",
+                "@babel/plugin-syntax-dynamic-import"
               ]
             }
           }
@@ -42,6 +43,10 @@ module.exports = env => {
         },
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/,
+          use: ["file-loader"]
+        },
+        {
+          test: /\.(woff|woff2|eot|ttf|otf)$/,
           use: ["file-loader"]
         },
         {

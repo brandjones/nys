@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 class Form extends React.Component {
   render() {
     const { props } = this.props;
-
     return (
       <form className="Form">
         <div className="wrapper">
@@ -37,6 +36,5 @@ class Form extends React.Component {
     );
   }
 }
-// <p> {props.policyAgreement} </p>
-// <p> {props.termsOfService} </p>
+
 export default Form;

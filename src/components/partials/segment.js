@@ -8,7 +8,7 @@ class Segment extends React.Component {
     return (
       <div className="Segment container">
         <div className="Segment__wrapper">
-          <div className="Segment__wrapper__column-two">{props.time}</div>
+          <div className="Segment__wrapper__column-two">{props.ui.time}</div>
           <div
             className={
               props.auth.email
@@ -29,8 +29,7 @@ const mapStateToProps = state => {
   return {
     auth: state.auth,
     error: state.error,
-    weather: state.weather,
-    stock: state.stock
+    ui: state.ui
   };
 };
 

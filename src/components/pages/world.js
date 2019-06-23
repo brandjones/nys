@@ -1,30 +1,90 @@
+const regeneratorRuntime = require("regenerator-runtime");
 import React from "react";
 import { connect } from "react-redux";
-
 import Content from "../partials/content";
-import MainContent from "../partials/maincontent";
 import { DoubleBorder } from "../partials/border";
+import _ from "lodash";
+import uuid from "uuid";
+import moment from "moment";
+import { getWorldData } from "../../actions/times";
+import ObserverWrapper from "react-intersection-observer";
 
 class World extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.myRef = React.createRef();
+  /**
+   * When the component mounts to the DOM, make a request to NYT API
+   * for 10 articles.
+   */
+  async componentDidMount() {
+    const world = await this.props.dispatch(getWorldData());
   }
 
+  WorldData = () => {
+    return this.props.times.world.map((item, index) => {
+      let url;
+      const images = item.multimedia.map(image => {
+        if (image.format === "superJumbo") {
+          url = image.url;
+        } else {
+          url = "https://source.unsplash.com/random/1600x900";
+        }
+      });
+      return (
+        <div key={uuid()} className="RenderContent">
+          <div className="divider"> </div>
+          <div className="RenderContent column">
+            <div className="RenderContent__title ">
+              <a href={item.url}>
+                {" "}
+                <h3 className="text-container"> {item.title} </h3>{" "}
+              </a>
+            </div>
+            <div className="RenderContent__abstract">
+              <a href={item.url}> </a>
+              <p> {item.abstract}</p>
+              <p> {item.subsection}</p>
+              <p>
+                {" "}
+                {moment()
+                  .startOf(item.created_date)
+                  .fromNow()}
+              </p>
+            </div>
+          </div>
+          <div className="divider"> </div>
+          <div className="RenderContent-image-wrapper">
+            <a className="link-wrapper" href={item.url}>
+              <ObserverWrapper>
+                <img
+                  alt="times"
+                  className="image"
+                  src={
+                    url ||
+                    `https://source.unsplash.com/random/1600x900?${item.title}`
+                  }
+                />
+              </ObserverWrapper>
+            </a>
+          </div>
+        </div>
+      );
+    });
+  };
+
   render() {
-    const { props } = this;
     return (
       <div className="container">
         <h1 className="forum"> World </h1>
-        <Content />
         <DoubleBorder />
-        <MainContent history={props.history} />
+        <Content
+          path={this.props.match.path}
+          world={() => {
+            return this.WorldData();
+          }}
+        />
       </div>
     );
   }
 }
-
 const mapStateToProps = state => {
   return {
     times: state.times

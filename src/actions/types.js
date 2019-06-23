@@ -14,14 +14,20 @@ export const LOGOFF_USER = "LOGOFF_USER";
 export const LOGIN_USER = "LOGIN_USER";
 
 /**
-ERROR REDUCER
+ * Controls the static types of the action creators that are
+ * sent through the application. There should be no reason to
+ * have action creators with "typos."
+ */
+
+/**
+Error Reducer
 **/
 export const ADD_EMAIL_ERROR = "ADD_EMAIL_ERROR";
 export const ADD_PASSWORD_ERROR = "ADD_PASSWORD_ERROR";
 export const REMOVE_ERROR = "REMOVE_ERROR";
 
 /*
-TIMES REDUCER
+Times Reducer
 */
 
 export const GET_WORLD_DATA = "GET_WORLD_DATA";
@@ -35,3 +41,11 @@ export const GET_OPINION_DATA = "GET_OPINION_DATA";
 export const GET_SCIENCE_DATA = "GET_SCIENCE_DATA";
 export const GET_SPORTS_DATA = "GET_SPORTS_DATA";
 export const GET_BOOKS_DATA = "GET_BOOKS_DATA";
+
+/**
+UI Reducer
+ */
+
+export const TOGGLE_MODAL = "TOGGLE_MODAL";
+export const SET_TIME = "SET_TIME";
+export const STOP_TIME = "STOP_TIME";

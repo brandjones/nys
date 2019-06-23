@@ -1,3 +1,50 @@
-.loading {
-  border: 5px solid pink;
+@media only screen and (min-width: 0px) and (max-width: 739px) {
+  .DotLoader {
+    background: #f9f9f9;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: background 1s ease-in-out;
+  }
+  .DotLoader-container {
+    position: absolute;
+    top: 25%;
+    right: 35%;
+    transition: position 0.5s;
+  }
+}
+
+@media only screen and (min-width: 740px) and (max-width: 1023px) {
+  .DotLoader {
+    background: #f9f9f9;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: background 0.25s ease-in-out;
+  }
+  .DotLoader-container {
+    position: absolute;
+    top: 35%;
+    right: 35%;
+    transition: position 0.5s;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .DotLoader {
+    background: #f9f9f9;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: background 0.25s ease-in-out;
+  }
+  .DotLoader-container {
+    position: absolute;
+    top: 35%;
+    right: 45%;
+    transition: position 0.5s;
+  }
 }

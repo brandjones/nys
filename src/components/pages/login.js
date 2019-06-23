@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
-import google from "../../../public/images/search.png";
 import Form from "../partials/form";
 import { runClassNames } from "./subscribe";
 
@@ -31,12 +30,6 @@ class Login extends React.Component {
           <div to="/" className="button-container">
             <div>
               <Link to="/">Google</Link>
-            </div>
-            <div>
-              <Link to="/">
-                {" "}
-                <img alt="jazz" src={google} />{" "}
-              </Link>
             </div>
           </div>
 

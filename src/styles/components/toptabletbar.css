@@ -6,49 +6,31 @@
 
 @media only screen and (min-width: 1024px) {
   .TopTabletBar {
-    /* background: red; */
     margin: 0;
     padding: 0;
   }
 
   .TopTabletBar-row {
-    /* background: yellow; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* justify-content: space-around; */
   }
 
   .TopTabletBar-column-one {
-    /* background: orange; */
-    display: flex;
+    display: none;
     flex-direction: row;
     justify-content: space-between;
     padding: 5px;
   }
 
-  .TopTabletBar-column-one .bar {
+  /* .TopTabletBar-column-one .bar {
     margin: 5px;
     padding: 5px;
     text-align: center;
-  }
+  } */
 
   .TopTabletBar-column-one .user {
     margin: 5px;
-  }
-
-  .TopTabletBar-column-two {
-    align-items: center;
-    /* background: pink; */
-    color: #222;
-    display: flex;
-    font-size: 12px;
-    font-family: "Hind";
-    font-weight: bold;
-    justify-content: flex-end;
-    margin-left: -150px;
-    padding: 5px;
-    text-transform: uppercase;
-    width: 40%;
   }
 
   .TopTabletBar-column-two a:first-of-type {
@@ -56,11 +38,21 @@
   }
 
   .TopTabletBar-column-three {
-    align-items: center;
+    /* width: 80%; */
     /* background: pink; */
-    display: flex;
+    /* align-items: center; */
+    /* display: flex;
     font-family: "Hind";
     font-weight: bold;
+    justify-content: space-between; */
+  }
+
+  .TopTabletBar-column-three-login-wrapper {
+    /* width: 90%; */
+    /* background: orange; */
+    /* width: 70%; */
+    display: flex;
     justify-content: flex-end;
+    /* margin: 0 05%; */
   }
 }

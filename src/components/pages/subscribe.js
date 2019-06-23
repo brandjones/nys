@@ -36,12 +36,6 @@ class Subscribe extends React.Component {
             <div>
               <Link to="/">Google</Link>
             </div>
-            <div>
-              <Link to="/">
-                {" "}
-                <img alt="buffalo" src={google} />{" "}
-              </Link>
-            </div>
           </div>
           <div className={runClassNames(successmessage, errormessage)}>
             {successmessage} {errormessage}

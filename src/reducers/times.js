@@ -15,8 +15,6 @@ import {
 import _ from "lodash";
 
 const timesReducerDefaultState = {
-  tablet: [],
-  home: [],
   world: [],
   arts: [],
   national: [],
@@ -24,10 +22,10 @@ const timesReducerDefaultState = {
   technology: [],
   health: [],
   business: [],
+  opinion: [],
   science: [],
   sports: [],
-  books: [],
-  opinion: []
+  books: []
 };
 
 const timesReducer = (state = timesReducerDefaultState, action) => {
@@ -37,96 +35,92 @@ const timesReducer = (state = timesReducerDefaultState, action) => {
       const world = action.payload.data.results.slice(0, 10);
       return {
         ...state,
-        world: world
+        world
       };
 
     case GET_ARTS_DATA:
-      // Limit the number of items to three
-      const arts = action.payload.data.results.slice(0, 5);
-      const tablet = action.payload.data.results.slice(0, 3);
+      // Limit the number of items to ten.
+      const arts = action.payload.data.results.slice(0, 10);
       return {
         ...state,
-        arts: arts,
-        tablet: tablet
-      };
-
-    case GET_BUSINESS_DATA:
-      // Limit the number of items to three
-      const business = action.payload.data.results.slice(0, 10);
-
-      return {
-        ...state,
-        business: business
-      };
-    case GET_OPINION_DATA:
-      // Limit the number of items to three
-      const opinion = action.payload.data.results.slice(0, 10);
-
-      return {
-        ...state,
-        opinion: opinion
+        arts
       };
     case GET_NATIONAL_DATA:
-      // Limit the number of items to three
+      // Limit the number of items to ten.
       const national = action.payload.data.results.slice(0, 10);
 
       return {
         ...state,
-        national: national
+        national
       };
     case GET_POLITICS_DATA:
-      // Limit the number of items to three
+      // Limit the number of items to ten.
       const politics = action.payload.data.results.slice(0, 10);
 
       return {
         ...state,
-        politics: politics
+        politics
       };
-
     case GET_TECHNOLOGY_DATA:
-      // Limit the number of items to three
+      // Limit the number of items to ten.
       const technology = action.payload.data.results.slice(0, 10);
-      const tech = action.payload.data.results.slice(3, 4);
 
       return {
         ...state,
-        technology: technology
+        technology
       };
 
     case GET_HEALTH_DATA:
-      // Limit the number of items to three
+      // Limit the number of items to ten.
       const health = action.payload.data.results.slice(0, 10);
-      const healthy = action.payload.data.results.slice(8, 10);
 
       return {
         ...state,
-        health: health
+        health
+      };
+
+    case GET_BUSINESS_DATA:
+      // Limit the number of items to ten.
+      const business = action.payload.data.results.slice(0, 10);
+
+      return {
+        ...state,
+        business
+      };
+
+    case GET_OPINION_DATA:
+      // Limit the number of items to three.
+      const opinion = action.payload.data.results.slice(0, 3);
+
+      return {
+        ...state,
+        opinion
       };
 
     case GET_SCIENCE_DATA:
-      // Limit the number of items to three
+      // Limit the number of items to ten.
       const science = action.payload.data.results.slice(0, 10);
 
       return {
         ...state,
-        science: science
+        science
       };
 
     case GET_SPORTS_DATA:
-      // Limit the number of items to three
+      // Limit the number of items to ten.
       const sports = action.payload.data.results.slice(0, 10);
 
       return {
         ...state,
-        sports: sports
+        sports
       };
 
     case GET_BOOKS_DATA:
-      // Limit the number of items to three
+      // Limit the number of items to ten.
       const books = action.payload.data.results.slice(0, 10);
       return {
         ...state,
-        books: books
+        books
       };
     default:
       return state;

@@ -1,56 +1,44 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
+import { Link, Route } from "react-router-dom";
 import { connect } from "react-redux";
-
-const renderIcons = (location, props) => {
-  switch (location) {
-    case "/login":
-      return (
-        <div className="Header">
-          <Link to="/" className="Header__logo">
-            New York Sentinel
-          </Link>
-        </div>
-      );
-    case "/subscribe":
-      return (
-        <div className="Header">
-          <Link to="/" className="Header__logo">
-            New York Sentinel
-          </Link>
-        </div>
-      );
-    default:
-      return (
-        <div className="Header">
-          <div className="Header__hamburger">
-            <i className="bars icon" onClick={props.toggleHamburgerState} />
-          </div>
-          <Link to="#" className="Header__logo">
-            New York Sentinel
-          </Link>
-          <div className="Header__user">
-            <i className="user icon" onClick={props.toggleHamburgerState} />
-          </div>
-        </div>
-      );
-  }
-};
+import { toggleModal } from "../../actions/ui";
 
 class Header extends React.Component {
   render() {
-    const { props } = this;
-    const location = props.location.pathname;
+    return (
+      <div className="Header">
+        <div className="Header__hamburger">
+          <i
+            className="bars icon"
+            onClick={() => {
+              return this.props.dispatch(toggleModal(true));
+            }}
+          />
+        </div>
 
-    return renderIcons(location, props);
+        <Link to="/" className="Header__logo">
+          New York Sentinel
+        </Link>
+
+        <div className="Header__user">
+          <i
+            className="user icon"
+            onClick={() => {
+              return this.props.dispatch(toggleModal(true));
+            }}
+          />{" "}
+        </div>
+      </div>
+    );
   }
 }
 
 const mapStateToProps = state => {
   return {
     auth: state.auth,
-    error: state.error
+    error: state.error,
+    ui: state.ui
   };
 };
 
