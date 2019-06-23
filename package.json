@@ -10,7 +10,8 @@
   "author": "Brandon Jones",
   "license": "MIT",
   "scripts": {
-    "start": "concurrently \"nodemon server/server.js\" \"webpack-dev-server\"",
+    "start": "node server.js",
+    "serve": "concurrently \"nodemon server/server.js\" \"webpack-dev-server\"",
     "dev": "yarn run build:dev",
     "build": "webpack",
     "build:prod": "webpack -p --env production",
