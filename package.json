@@ -11,7 +11,7 @@
   "license": "MIT",
   "scripts": {
     "start": "node server.js",
-    "serve": "concurrently \"nodemon server/server.js\" \"webpack-dev-server\"",
+    "serve": "concurrently \"nodemon server.js\" \"webpack-dev-server\"",
     "dev": "yarn run build:dev",
     "build": "webpack",
     "build:prod": "webpack -p --env production",
