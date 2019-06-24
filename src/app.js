@@ -36,8 +36,6 @@ import Home from "../src/components/pages/home";
 import { store } from "./store";
 import "../src/styles/base/base.css";
 
-import { setTime, stopTime } from "./actions/ui";
-
 class Sentinel extends React.Component {
   constructor(props) {
     super(props);
