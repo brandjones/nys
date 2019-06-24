@@ -21,7 +21,7 @@ import {
 
 export const getWorldData = () => async dispatch => {
   const response = await axios.get(
-    "http://api.nytimes.com/svc/topstories/v2/world.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
+    "https://api.nytimes.com/svc/topstories/v2/world.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
   );
   dispatch({
     type: GET_WORLD_DATA,
@@ -36,7 +36,7 @@ export const getWorldData = () => async dispatch => {
 
 export const getArtsData = () => async dispatch => {
   const response = await axios.get(
-    "http://api.nytimes.com/svc/topstories/v2/arts.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
+    "https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
   );
   dispatch({
     type: GET_ARTS_DATA,
@@ -51,7 +51,7 @@ export const getArtsData = () => async dispatch => {
 
 export const getNationalData = () => async dispatch => {
   const response = await axios.get(
-    "http://api.nytimes.com/svc/topstories/v2/national.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
+    "https://api.nytimes.com/svc/topstories/v2/national.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
   );
   dispatch({
     type: GET_NATIONAL_DATA,
@@ -66,7 +66,7 @@ export const getNationalData = () => async dispatch => {
 
 export const getPoliticsData = () => async dispatch => {
   const response = await axios.get(
-    "http://api.nytimes.com/svc/topstories/v2/politics.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
+    "https://api.nytimes.com/svc/topstories/v2/politics.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
   );
   dispatch({
     type: GET_POLITICS_DATA,
@@ -81,7 +81,7 @@ export const getPoliticsData = () => async dispatch => {
 
 export const getTechnologyData = () => async dispatch => {
   const response = await axios.get(
-    "http://api.nytimes.com/svc/topstories/v2/technology.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
+    "https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
   );
   dispatch({
     type: GET_TECHNOLOGY_DATA,
@@ -96,7 +96,7 @@ export const getTechnologyData = () => async dispatch => {
 
 export const getHealthData = () => async dispatch => {
   const response = await axios.get(
-    "http://api.nytimes.com/svc/topstories/v2/health.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
+    "https://api.nytimes.com/svc/topstories/v2/health.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
   );
   dispatch({
     type: GET_HEALTH_DATA,
@@ -111,7 +111,7 @@ export const getHealthData = () => async dispatch => {
 
 export const getBusinessData = () => async dispatch => {
   const response = await axios.get(
-    "http://api.nytimes.com/svc/topstories/v2/business.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
+    "https://api.nytimes.com/svc/topstories/v2/business.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
   );
   dispatch({
     type: GET_BUSINESS_DATA,
@@ -127,7 +127,7 @@ export const getBusinessData = () => async dispatch => {
 
 export const getOpinionData = () => async dispatch => {
   const response = await axios.get(
-    "http://api.nytimes.com/svc/topstories/v2/opinion.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
+    "https://api.nytimes.com/svc/topstories/v2/opinion.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
   );
   dispatch({
     type: GET_OPINION_DATA,
@@ -142,7 +142,7 @@ export const getOpinionData = () => async dispatch => {
 
 export const getScienceData = () => async dispatch => {
   const response = await axios.get(
-    "http://api.nytimes.com/svc/topstories/v2/science.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
+    "https://api.nytimes.com/svc/topstories/v2/science.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
   );
   dispatch({
     type: GET_SCIENCE_DATA,
@@ -157,7 +157,7 @@ export const getScienceData = () => async dispatch => {
 
 export const getSportsData = () => async dispatch => {
   const response = await axios.get(
-    "http://api.nytimes.com/svc/topstories/v2/sports.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
+    "https://api.nytimes.com/svc/topstories/v2/sports.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
   );
   dispatch({
     type: GET_SPORTS_DATA,
@@ -172,7 +172,7 @@ export const getSportsData = () => async dispatch => {
 
 export const getBooksData = () => async dispatch => {
   const response = await axios.get(
-    "http://api.nytimes.com/svc/topstories/v2/books.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
+    "https://api.nytimes.com/svc/topstories/v2/books.json?api-key=YuI8dUZ26YxvXAYOmCBhDNnLyXY1GWXL"
   );
   dispatch({
     type: GET_BOOKS_DATA,
