@@ -30,7 +30,7 @@
     "@babel/preset-react": "7.0.0",
     "@emarketeross/simple-react-intersection-observer": "^0.1.13",
     "@loadable/component": "^5.10.1",
-    "axios": "0.19.0",
+    "axios": "0.21.1",
     "babel-loader": "^8.0.6",
     "concurrently": "^4.1.0",
     "core-js": "^3.1.4",
